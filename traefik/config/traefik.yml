@@ -11,7 +11,7 @@ certificatesResolvers:
   acme:
     acme:
       email: iliazeus@proton.me
-      storage: data/acme.json
+      storage: /data/acme.json
       httpChallenge:
         entryPoint: web
 
@@ -19,5 +19,5 @@ providers:
   docker:
     exposedByDefault: false
   file:
-    directory: src/dynamic
+    directory: /config/dynamic
     watch: true

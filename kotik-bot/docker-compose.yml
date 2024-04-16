@@ -4,7 +4,8 @@ services:
   kotik-bot:
     image: ghcr.io/iliazeus/kotik-bot:master
     env_file: .env
-    volumes: [./data:./data]
+    working_dir: /data
+    volumes: [./data:/data]
     networks: [external]
     restart: unless-stopped
     deploy:
