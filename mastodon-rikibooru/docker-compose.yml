@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   bot:
@@ -13,5 +13,4 @@ services:
         limits: { cpus: "0.1", memory: "32M" }
 
 networks:
-  external:
-    external: true
+  external: { external: true }
