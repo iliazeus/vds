@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   achievement-bot:
     image: ghcr.io/iliazeus/achievement-bot:master
@@ -8,3 +10,7 @@ services:
     deploy:
       resources:
         limits: { cpus: "0.25", memory: "64M" }
+
+networks:
+  external:
+    external: true

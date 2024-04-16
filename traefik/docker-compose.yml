@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   traefik:
     image: traefik:v2.10.3
@@ -8,3 +10,7 @@ services:
       - ./src:./src:ro
       - ./data:./data
     restart: unless-stopped
+
+networks:
+  external:
+    external: true
