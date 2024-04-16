@@ -1,0 +1,23 @@
+log:
+  level: INFO
+
+entryPoints:
+  web:
+    address: ':80'
+  websecure:
+    address: ':443'
+
+certificatesResolvers:
+  acme:
+    acme:
+      email: iliazeus@proton.me
+      storage: data/acme.json
+      httpChallenge:
+        entryPoint: web
+
+providers:
+  docker:
+    exposedByDefault: false
+  file:
+    directory: src/dynamic
+    watch: true

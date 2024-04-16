@@ -1,0 +1,10 @@
+services:
+  kotik-bot:
+    image: ghcr.io/iliazeus/kotik-bot:master
+    env_file: .env
+    volumes: [./data:./data]
+    networks: [external]
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits: { cpus: "0.25", memory: "32M" }
