@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  mastodon-rikibooru:
+  bot:
     image: ghcr.io/iliazeus/mastodon-rikibooru:master
     env_file: .env
     working_dir: /data
