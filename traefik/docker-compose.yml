@@ -7,8 +7,9 @@ services:
     ports: ["80:80", "443:443"]
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./config:/config:ro
-      - ./data:/data
+      - ./config/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./config/dynamic:/etc/traefik/dynamic:ro
+      - ./data/acme.json:/acme.json
     restart: unless-stopped
 
 networks:
