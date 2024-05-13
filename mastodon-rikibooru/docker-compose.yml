@@ -4,6 +4,8 @@ services:
   bot:
     image: ghcr.io/iliazeus/mastodon-rikibooru:master
     env_file: .env
+    environment:
+      POST_IMMEDIATELY: ${POST_IMMEDIATELY-}
     working_dir: /data
     volumes: [./data:/data]
     networks: [external]
