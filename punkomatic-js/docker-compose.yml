@@ -16,12 +16,12 @@ services:
       - traefik.enable=true
 
       - traefik.http.routers.punkomatic-js.entrypoints=web
-      - traefik.http.routers.punkomatic-js.rule=(Host(`iliazeus.lol`) && PathPrefix(`/punkomatic-js`))
+      - traefik.http.routers.punkomatic-js.rule=(Host(`ruvds.iliazeus.lol`) && PathPrefix(`/punkomatic-js`))
       - traefik.http.routers.punkomatic-js.middlewares=redirect-to-https@file
 
       - traefik.http.routers.punkomatic-js-secure.entrypoints=websecure
       - traefik.http.routers.punkomatic-js-secure.tls.certresolver=acme
-      - traefik.http.routers.punkomatic-js-secure.rule=(Host(`iliazeus.lol`) && PathPrefix(`/punkomatic-js`))
+      - traefik.http.routers.punkomatic-js-secure.rule=(Host(`ruvds.iliazeus.lol`) && PathPrefix(`/punkomatic-js`))
 
       - traefik.http.routers.punkomatic-js-secure.middlewares=punkomatic-js-cors,punkomatic-js-ratelimit,punkomatic-js-strip-prefix
 
