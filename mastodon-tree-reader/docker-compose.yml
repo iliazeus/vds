@@ -24,7 +24,7 @@ services:
 
       - traefik.http.routers.mastodon-tree-reader-secure.middlewares=mastodon-tree-reader-strip-prefix,mastodon-tree-reader-cors
       - traefik.http.middlewares.mastodon-tree-reader-strip-prefix.stripprefix.prefixes=/mastodon-tree-reader
-      - traefik.http.middlewares.mastodon-tree-reader-cors.headers.accesscontrolalloworiginlist=iliazeus.lol
+      - traefik.http.middlewares.mastodon-tree-reader-cors.headers.accesscontrolalloworiginlist=https://iliazeus.lol
 
 networks:
   external: { external: true }
